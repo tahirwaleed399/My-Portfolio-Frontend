@@ -2,6 +2,7 @@ import React from "react";
 import { BsGithub, BsArrowUpLeft } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { Project as ProjectInterface } from "../../../../Interfaces/Project";
+import LazyLoad from "react-lazyload";
 
 
 const textAnimation = {
@@ -42,7 +43,7 @@ const Project = ({projectData} : {projectData : ProjectInterface | any}) => {
         }}
         className="projectImage"
       >
-        <img src={projectData.projectImage.url} alt="space" />
+         <LazyLoad once> <img src={projectData.projectImage.url} alt="MyImage" /> </LazyLoad>
       </motion.div>
       <div className="projectContent">
         <motion.h2

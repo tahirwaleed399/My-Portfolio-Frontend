@@ -11,6 +11,7 @@ import User from "../../Interfaces/User";
 import Testimonials from "../../Components/User/Testimonials/Testimonials";
 import Pitch from "../../Components/User/Pitch/Pitch";
 import Marketplaces from "../../Components/User/Marketplaces/Marketplaces";
+import LazyLoad from 'react-lazyload';
 const Home = () => {
 
   const {user} : {user : User} = useSelector((state:any)=>state.userState);
@@ -74,7 +75,7 @@ Contact Now!
 
         <div className="heroImage">
          {
-          user &&  <img src={user.mainImage.url} alt="MyImage" />
+          user &&  <LazyLoad once> <img src={user.mainImage.url} alt="MyImage" /> </LazyLoad>
          }
         </div>
       </header>

@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import User from '../../../Interfaces/User';
 import Heading from '../../Shared/Heading/Heading';
 import {motion} from 'framer-motion';
+import LazyLoad from 'react-lazyload';
 const About = () => { 
   const {user} : {user : User} = useSelector((state:any)=>state.userState);
 
@@ -20,7 +21,7 @@ const About = () => {
     <div className="aboutImage my-16">
        <div className="imgWrapper">
 {
-    user &&         <img src={user.aboutImage.url} alt="myownimage" />
+    user &&       <LazyLoad once> <img src={user.aboutImage.url} alt="MyImage" /> </LazyLoad>
 }
         <div className="border"></div>
        </div>

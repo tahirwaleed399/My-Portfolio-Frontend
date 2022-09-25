@@ -26,6 +26,7 @@
     "react-dat-gui": "^4.1.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
+    "react-lazyload": "^3.2.0",
     "react-nestable": "^2.0.0",
     "react-quill": "^2.0.0",
     "react-redux": "^8.0.2",
@@ -66,6 +67,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-lazyload": "^3.2.0",
     "@types/three": "^0.144.0",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.16",

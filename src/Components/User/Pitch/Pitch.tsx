@@ -1,4 +1,5 @@
 import React from 'react'
+import LazyLoad from 'react-lazyload'
 
 const Pitch = () => {
   return (
@@ -10,7 +11,11 @@ const Pitch = () => {
      <a href="#contact">       <button className="btn btn-sm btn-contained ">Contact Now</button></a>
         </div>
         <div className="image">
-            <img src="/images/project.webp" alt="" />
+        <LazyLoad once>
+     <img src={'/images/project.webp'} alt="myimage" />
+
+     </LazyLoad>
+
         </div>
     </main>
   </section>

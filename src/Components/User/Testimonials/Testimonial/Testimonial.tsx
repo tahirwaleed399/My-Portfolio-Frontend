@@ -1,12 +1,16 @@
 import React from 'react'
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
+import LazyLoad from 'react-lazyload'
 
 const Testimonial = ({data} : any) => {
   return (
     <div className="testimonial">
     <div className="info">
      <div className="profile">
+     <LazyLoad once>
      <img src={data.image.url} alt="myimage" />
+
+     </LazyLoad>
      </div>
      <span className="name">'' {data.name} ''</span>
     </div>
