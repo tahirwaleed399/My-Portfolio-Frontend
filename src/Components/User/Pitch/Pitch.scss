@@ -1,0 +1,42 @@
+#pitch {
+    margin : $sectionMargin 0 ;
+  main{
+    background-color: $navy;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border-radius: 10px;
+    gap: 2rem;
+    @media screen and (max-width : $mobile-breakpoint) {
+        flex-direction: column;
+        justify-content: center
+
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 60px;
+      h1{
+        font-size:30px;
+      }
+      p{
+        font-size: $f-sm;
+      }
+      a {
+        align-self: flex-start;
+      }
+    }
+.image {
+    align-self: flex-end;
+}
+    img{
+        height: 100%;
+        width: 100%;
+
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.mainInfo{
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 20px 0;
+textarea{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid $slate;
+}
+input,textarea{
+    font-size: 12px;
+}
+}

@@ -1,0 +1,19 @@
+.projectsContainer{
+    padding: 10px 20px;
+}
+
+.projects {
+    ol {
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.3rem;
+        justify-content: center;
+        align-items: center;
+    }
+ }
+
+ .is-dragging {
+    opacity: 0.4;
+    border: 2px solid skyblue;
+ }

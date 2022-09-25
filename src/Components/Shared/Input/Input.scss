@@ -1,0 +1,19 @@
+.specialInput{
+    color: white;
+    font-size: 13px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 0;
+    outline: none;
+    border: none;
+    background-color: transparent !important;
+    transition: all 0.1s ease;
+    border: 1px solid #ccd6f6;
+    
+    &:focus{
+        
+        border: 1px solid #64ffda;
+
+    }
+}

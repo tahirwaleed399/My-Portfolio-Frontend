@@ -1,0 +1,75 @@
+.swiper-slide{
+    width: 100% !important;
+    max-width: 380px !important;
+    margin: 10px 50px;
+
+    @media screen and (max-width : $mobile-breakpoint) {
+        margin: 0 5px;
+    }
+}
+section#testimonials{
+    margin: $sectionMargin 0;
+    user-select: none;
+
+ 
+
+    .testimonial {
+        background-color: $navy;
+        box-shadow: rgba($color: $green, $alpha: 0.37) 0px 5px 15px;
+        
+        width: 95%;
+        max-width: 380px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        gap: 10px;
+
+        .message {
+            .comma {
+                font-size: 20px;
+                color: $slate;
+                margin: 5px 0;
+                color: white;
+            }
+           p{
+            font-size: $f-sm;
+            color: $slate;
+@media screen and (max-width : $mobile-breakpoint) {
+    font-size: $f-xs;
+}
+           }
+        }
+       .info{
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items : center;
+
+        .name{
+            color: $green;
+            font-size: $f-lg;
+        }
+        .profile {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-color: $pink;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            img{
+                height: 90%;
+                width: 90%;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+        }
+       }
+    }
+
+}

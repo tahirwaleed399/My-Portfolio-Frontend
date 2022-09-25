@@ -1,0 +1,64 @@
+.animateScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  z-index: 6;
+  pointer-events: none;
+
+  .screen {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $dark-navy;
+    
+    font-size: 100px;
+    @media screen and (max-width : 500px) {
+      font-size: 40px;
+    }
+    font-weight: 800;
+
+  }
+ 
+  .screen:not(.screen1){
+    display: grid;
+    place-items: center;
+  }
+  .screen1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .screen7{
+    // background-color: $green;
+    background: rgb(100,255,218);
+background: radial-gradient(circle, rgba(100,255,218,1) 0%, rgba(17,54,64,1) 100%, rgba(168,178,209,1) 100%);
+  }
+
+  .screen6 , .screen3{
+    background: rgb(245,125,255);
+background: linear-gradient(138deg, rgba(245,125,255,1) 0%, rgba(10,25,47,1) 49%, rgba(17,54,64,1) 100%);
+  }
+
+  .screen5{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 49%, rgba(252,176,69,1) 100%);
+  }
+  .screen4{
+    background: rgb(10,25,47);
+background: linear-gradient(263deg, rgba(10,25,47,1) 8%, rgba(17,54,64,1) 61%, rgba(245,125,255,1) 100%);
+  }
+  
+  .screen2{
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 49%, rgba(252,176,69,1) 100%);
+  }  .screen1{
+    background: #000428;
+background: linear-gradient(90deg, #004e92 0%, #000428 49%, #dc2430 100%);
+  }
+}

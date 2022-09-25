@@ -1,0 +1,82 @@
+@import "../../Components/Admin/Sidebar/Sidebar.scss";
+@import "../../Components/Admin/MainInformation/MainInformation.scss";
+@import "../../Components/Admin/ChangeImages/ChangeImages.scss";
+@import "../../Components/Admin/Projects/Projects.scss";
+@import "../../Components/Admin/Timelines/Timelines.scss";
+@import "../../Components/Admin/Submissions/Submissions.scss";
+@import "../../Components/Admin/AddProject/AddProject.scss";
+@import "../../Components/Shared/ProjectForm/ProjectForm.scss";
+@import '../../Components/Shared/ImageInput/ImageInput.scss';
+@import '../../Components/Admin/UpdateProject/UpdateProject.scss';
+@import '../../Components/Admin/AddSkills/AddSkills.scss';
+#adminPanel {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: white;
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    width: $sidebar-width;
+    background-color: $light-navy;
+    z-index: 2;
+    transition: $transition;
+  }
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: $light-navy;
+    transition: $transition;
+
+    position: fixed;
+    top: 0;
+    right: -6px;
+    width: calc(100vw - $sidebar-width + 20px);
+    z-index: 1;
+    .hamburger {
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+
+      display: none;
+      margin: 0 20px;
+    }
+  }
+
+  section {
+    width: calc(100vw - $sidebar-width);
+    margin-left: auto;
+    transition: $transition;
+
+  }
+}
+
+@media screen and (max-width: 999px) {
+  #adminPanel {
+    aside {
+      transform: translateX(-100%);
+    }
+    nav {
+      right: 0;
+      width: 100vw;
+    height: 60px;
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    section {
+      margin-top: 60px;
+
+      width: 100vw;
+    }
+  }
+}

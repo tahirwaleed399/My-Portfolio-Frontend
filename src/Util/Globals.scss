@@ -1,0 +1,160 @@
+
+
+$dark-navy: #020c1b;
+$navy: #0a192f;
+$light-navy: #112240;
+$lightest-navy: #233554;
+$navy-shadow: rgba(2, 12, 27, 0.7);
+$dark-slate: #495670;
+$slate: #8892b0;
+$light-slate: #a8b2d1;
+$lightest-slate: #ccd6f6;
+$white: #e6f1ff;
+$green: #64ffda;
+$green-tint: rgba(100, 255, 218, 0.1);
+$pink: #f57dff;
+$blue: #57cbff;
+$f-xxs: 12px;
+$f-xs: 13px;
+$f-sm: 14px;
+$f-md: 16px;
+$f-lg: 18px;
+$f-xl: 20px;
+$f-xxl: 22px;
+$f-heading: 32px;
+$border-radius: 4px;
+$nav-height: 100px;
+$nav-scroll-height: 70px;
+$tab-height: 42px;
+$tab-width: 120px;
+$easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+$transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+$hamburger-width: 30px;
+$ham-before: top 0.1s ease-in 0.25s, opacity 0.1s ease-in;
+$ham-before-active: tfop 0.1s ease-out, opacity 0.1s ease-out 0.12s;
+$ham-after: bottom 0.1s ease-in 0.25s,
+  transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ham-after-active: bottom 0.1s ease-out,
+  transform 0.22s cubic-bezier(0.215, 0.61, 0.355, 1) 0.12s;
+
+$navHeight: 70px;
+$mobile-breakpoint: 850px;
+$sectionMargin: 150px;
+$sidebar-width: 270px;
+html {
+  font-size: 62.5%;
+  ::-webkit-scrollbar {
+    width: 6px;
+    border-left: 1px solid #e6ecf8;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $slate;
+  }
+}
+
+.mainHeading {
+  color: $white;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+}
+.lightHeading {
+  color: $slate;
+  font-size: 5rem;
+  font-size: clamp(4rem, 4vw, 5rem);
+  font-weight: 700;
+}
+.primaryText {
+  font-weight: 500;
+  font-size: $f-md;
+  color: $green;
+}
+
+.text {
+  font-size: $f-sm;
+
+  color: $light-slate;
+}
+
+.btn {
+  padding: 2rem 5rem;
+  border-radius: 5px;
+  font-size: $f-xs;
+  transition: $transition;
+}
+.btn-sm {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: $f-xs;
+  transition: $transition;
+}
+
+.btn:hover,
+.btn-sm:hover {
+  background-color: $green-tint;
+}
+.btn-outlined {
+  color: $green;
+  border: 1px solid $green;
+}
+
+.btn-contained{
+  color: navy;
+  border: 1px solid white;
+  font-weight: 700;
+background: $green;
+&:hover{
+  color: $green;
+  border: 1px solid $green;
+background: transparent;
+}
+
+}
+.links li {
+  margin: 0 3rem;
+  font-size: $f-sm;
+  transition: $transition;
+  color: white;
+
+  cursor: pointer;
+  &:hover {
+    color: $green;
+  }
+}
+
+.blockScroll {
+  overflow: hidden;
+}
+.hideScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.slate {
+  color: $slate;
+}
+.green {
+  color: $green;
+}
+@media screen and (max-width: 999px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media screen and (max-width: $mobile-breakpoint) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 500px) {
+  $f-xxs: 9px;
+  $f-xs: 11px;
+  $f-sm: 12px;
+  $f-md: 14px;
+  $f-lg: 16px;
+  $f-xl: 18px;
+  $f-xxl: 19px;
+  $f-heading: 28px;
+  html {
+    font-size: 50%;
+  }
+}

@@ -1,0 +1,18 @@
+section#skills {
+  margin-bottom: $sectionMargin;
+//   margin:  0;
+
+  main {
+   
+    #cubeBox{
+        height: 500px !important;
+        width: 100% !important;
+    }
+
+
+    .skillsChart{
+      min-height: 400px;
+
+    }
+  }
+}

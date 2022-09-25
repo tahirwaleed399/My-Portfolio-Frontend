@@ -1,0 +1,105 @@
+main#project {
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // width: 80%;
+    margin: 5rem auto;
+
+.projectImage{
+    position: relative;
+  right: -50px;
+  z-index: -1;
+  img{
+    max-height: 391px;
+    max-width: 647.3px;
+    height: 100%;
+    width: 100%;
+    
+    object-fit: contain;
+
+    border-radius: 5px;
+  }
+}
+    .projectContent{
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            font-size: $f-xxl;
+            color: $lightest-slate;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        .projectDescription{
+            background-color: $dark-navy;
+            color: $slate;
+            font-size: $f-sm;
+            padding: 20px 50px;
+            box-shadow: rgba($color: $green, $alpha: 0.37) 0px 5px 15px;
+            border-radius: 10px;
+            
+        }
+        .technologies{
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            color: $green;
+            font-size: $f-md;
+            justify-content: flex-end;
+        }
+        .actions{
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+            font-size: $f-lg;
+            color: $slate;
+          
+        }
+    }
+}
+
+@media screen and (max-width : $mobile-breakpoint) {
+    main#project {
+
+
+
+        grid-template-columns: 1fr ;
+    
+    
+    .projectImage{
+        position: static;
+    }
+        .projectContent{
+            text-align: left;
+            h2{
+                font-size: $f-xxl;
+                color: $lightest-slate;
+                font-weight: 600;
+                margin: 10px 0;
+            }
+            .projectDescription{
+                background-color: $dark-navy;
+                color: $slate;
+                font-size: $f-xs;
+                padding: 10px 20px;
+                border-radius: 10px;
+                
+            }
+            .technologies{
+               
+                font-size: $f-sm;
+            }
+            .actions{
+                display: flex;
+                justify-content: flex-end;
+                gap: 2rem;
+                font-size: $f-lg;
+                color: $slate;
+              
+            }
+        }
+    }
+}

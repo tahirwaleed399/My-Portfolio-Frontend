@@ -1,0 +1,43 @@
+
+
+.sectionHeading {
+    display: inline-flex;
+    align-items: center;
+    font-size: 40px;
+   
+    position: relative;
+    margin: 20px auto;
+gap: 2rem;
+justify-content: center;
+
+@media screen and (max-width : $mobile-breakpoint) {
+    font-size: 22px;
+
+}
+    h1{
+
+        color:white;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        right: -150px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2.5px;
+        width: 0;
+        background-color: white;
+        transition: $transition;
+        transition-duration: 500ms;
+        transform-origin: left;
+    }
+}
+
+.sectionHeading.animate {
+    &::after{
+        width: 140px;
+        transition-delay: 500ms;
+
+    }
+}

@@ -1,0 +1,12 @@
+.addSkills{
+   form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   }
+    .skillInput{
+display: flex;
+flex-direction: column;
+gap: 1rem;
+    }
+}
