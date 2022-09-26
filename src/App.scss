@@ -43,7 +43,15 @@ html {
   -ms-overflow-style: none !important;
   scrollbar-width: none !important; /* Firefox */
   overflow-x: hidden;
+  position: relative;
   scroll-behaviour:smooth;
+}
+html,body
+{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

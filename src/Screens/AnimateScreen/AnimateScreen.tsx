@@ -26,7 +26,7 @@ const AnimateScreen = () => {
   }}
 
   animate ={{
-    x :'-100%'
+    x :'-150%'
   }}
 
   transition={{
@@ -53,7 +53,7 @@ const AnimateScreen = () => {
   }}
 
   animate ={{
-    x :'100%'
+    x :'150%'
   }}
 
   transition={{
@@ -68,7 +68,7 @@ const AnimateScreen = () => {
     }}
 
     animate ={{
-      x :'-100%'
+      x :'-150%'
     }}
 
     transition={{
@@ -84,7 +84,7 @@ const AnimateScreen = () => {
   }}
 
   animate ={{
-  y :'100%'
+  y :'150%'
   }}
 
   transition={{
@@ -101,7 +101,7 @@ const AnimateScreen = () => {
     }}
 
     animate ={{
-      x :'-100%'
+      x :'-150%'
     }}
 
     transition={{
@@ -120,7 +120,7 @@ const AnimateScreen = () => {
   }}
 
   animate ={{
-    x :'100%'
+    x :'150%'
   }}
 
   transition={{
@@ -139,7 +139,7 @@ const AnimateScreen = () => {
     }}
 
     animate ={{
-      y :'-100%'
+      y :'-150%'
     }}
 
     transition={{
@@ -162,7 +162,7 @@ const AnimateScreen = () => {
   }}
 
   animate ={{
-    x :'100%'
+    x :'150%'
   }}
 
   transition={{
