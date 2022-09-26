@@ -6,6 +6,14 @@ import { toast } from "react-toastify";
 import { userState } from "../Interfaces/UserState";
 import { backendUrl } from "../Util/backendurl";
 
+
+const options = {
+  headers: {"content-type": "application/json"},
+  withCredentials : true ,
+  credentials : 'include'
+
+}
+
 const initialState = {
   isLoading: false,
   isSuccess: false,
@@ -57,7 +65,7 @@ export const getUser = createAsyncThunk(
   "user/GET_USER",
   async (type, thunkAPI) => {
     try {
-      let res: any = await axios.get(backendUrl + "/me");
+      let res: any = await axios.get(backendUrl + "/me" , options);
 
       return res.data.data[0] as User;
     } catch (err: any) {
@@ -72,7 +80,7 @@ export const logout = createAsyncThunk(
   "user/LOGOUT",
   async (type, thunkAPI) => {
     try {
-      let res: any = await axios.get(backendUrl + "/logout");
+      let res: any = await axios.get(backendUrl + "/logout" ,options);
 
       return res.data.success;
     } catch (err: any) {
@@ -86,7 +94,7 @@ export const isAuthenticatedUser = createAsyncThunk(
   "user/isAuthenticated",
   async (type, thunkAPI) => {
     try {
-      let res: any = await axios.get(backendUrl + "/isAuthenticated");
+      let res: any = await axios.get(backendUrl + "/isAuthenticated",options);
 
       return res.data;
     } catch (err: any) {

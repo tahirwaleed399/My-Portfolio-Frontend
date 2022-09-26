@@ -13,6 +13,8 @@ export const userApi = createApi({
           url: "login",
           body: data,
           method: "POST",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
 
@@ -23,6 +25,8 @@ export const userApi = createApi({
           url: "updateMe",
           body: data,
           method: "PUT",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
       invalidatesTags:['user' as any]
@@ -33,6 +37,8 @@ export const userApi = createApi({
         return {
           url: "contact",
           method: "GET",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
     }),

@@ -8,6 +8,7 @@ import * as Yup from "yup";
 import ContactTimeLine from "./ContactTimeLine";
 import { toast } from "react-toastify";
 import {motion} from 'framer-motion'
+import { backendUrl } from "../../../Util/backendurl";
  
 interface ContactInterface {name : string , email:string , message : string , phoneNo : string}
 const Contact = () => {
@@ -15,10 +16,14 @@ const Contact = () => {
  async function formSubmit(formData:ContactInterface, {resetForm}:any){
 try {
   submitBtn.current.disabled= true ;
-  let res : AxiosResponse = await axios.post('/contact', formData)
+  let res : AxiosResponse = await axios.post(backendUrl +  '/contact', formData,{
+    headers: {"content-type": "application/json"},
+    withCredentials : true ,
+  
+  });
+  console.log(res)
   toast.success('Form Submitted SuccessFully 🎉');
   submitBtn.current.disabled= false ;
-
 resetForm();
 }catch(error){
   submitBtn.current.disabled= false ;

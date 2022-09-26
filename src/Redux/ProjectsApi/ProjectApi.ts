@@ -14,6 +14,8 @@ export const projectApi  :any= createApi({
           url: "project",
           body: data,
           method: "POST",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
       invalidatesTags:['project']
@@ -25,6 +27,8 @@ export const projectApi  :any= createApi({
           url: "reorderProjects",
           body: data,
           method: "PUT",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
       invalidatesTags:['project']
@@ -37,6 +41,8 @@ export const projectApi  :any= createApi({
           url: "project",
           body: data,
           method: "PUT",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
       invalidatesTags:['project']
@@ -48,6 +54,8 @@ export const projectApi  :any= createApi({
         return {
           url: "project",
           method: "GET",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
       transformResponse : (responce : any)=>{
@@ -67,7 +75,9 @@ return newResponce;
         return {
           url: "getSingleProject",
           method: "PUT",
-          body : data
+          body : data,
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
     }),  
@@ -76,7 +86,9 @@ return newResponce;
         return {
           url: "project",
           body:data,
-          method: "DELETE"
+          method: "DELETE",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
       invalidatesTags:['project']

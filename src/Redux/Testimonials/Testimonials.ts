@@ -12,6 +12,8 @@ export const testimonialApi = createApi({
         return {
           url: "testimonial",
           method: "GET",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
 providesTags:['testimonial']
@@ -23,6 +25,8 @@ providesTags:['testimonial']
           url: "testimonial",
           body: data,
           method: "POST",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
       invalidatesTags:['testimonial']
@@ -34,6 +38,8 @@ providesTags:['testimonial']
           url: "testimonial",
           body: data,
           method: "PUT",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
       invalidatesTags:['testimonial']
@@ -46,6 +52,8 @@ providesTags:['testimonial']
         return {
           url: "getTestimonial?id="+data._id,
           method: "GET",
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
    
@@ -57,7 +65,9 @@ providesTags:['testimonial']
         return {
           url: "testimonial",
           method: "DELETE",
-          body : data
+          body : data,
+          headers: { "content-type": "application/json" },
+          credentials: "include",
         };
       },
       invalidatesTags:['testimonial']
